@@ -1,0 +1,517 @@
+/*-- CSS Reset --*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/*-- /////
+
+BEGIN CODE 
+
+///// --*/
+
+p {
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 30px;
+   line-height: 45px;
+}
+
+@font-face {
+   font-family:'bebas';
+   src: url('fonts/bebas/Bebas-Regular.ttf') format('truetype');
+}
+
+h1 {
+   color: #579B3E; 
+   font-size: 12em;
+   text-align: center;
+   font-family: 'bebas', Georgia, 'Times New Roman', Times, serif;
+   padding: 0.4em;
+   padding-bottom: 50px;
+   padding-top: 80px;
+}
+
+h2 {
+   color: #579B3E;
+   font-size: 4em;
+   font-family: 'bebas', Georgia, 'Times New Roman', Times, serif;
+}
+a {
+   text-decoration: none;
+}
+
+/* ------------
+  NAVIGATION BAR
+------------- */
+
+nav {
+   background-color: #2F522B;
+   padding: 2rem;
+}
+
+nav, text {
+   color: #FFFFFF;
+   font-weight: bold;
+   font-size: 1.5em;
+}
+
+nav, .container {
+   text-align: center;
+   font-size: 1.3em;
+}
+
+nav a {
+   color:#FFFFFF;
+   text-decoration: none;
+   padding: 25px;
+}
+
+nav .flexbox {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+   overflow: hidden;
+ }
+ 
+ /* Style the links inside the navigation bar */
+ .topnav a {
+   float: left;
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+ 
+ /* Change the color of links on hover */
+ .topnav a:hover {
+   background-color:#D8E095;
+   color:#2F522B;
+ }
+ 
+ /* Add an active class to highlight the current page
+ .topnav a.active {
+   background-color:#579B3E;
+   color: white;
+ }
+ */
+
+/* --------
+  NAV BAR - SMALLER SCREEN
+--------- */
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 830px) {
+   .topnav a:not(:first-child) {display: none;}
+   .topnav a.icon {
+     float: right;
+     display: block;
+   }
+ }
+ 
+ /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+ @media screen and (max-width: 830px) {
+   .topnav.responsive {position: relative;}
+   .topnav.responsive a.icon {
+     position: absolute;
+     right: 0;
+     top: 0;
+   }
+   .topnav.responsive a {
+     float: none;
+     display: block;
+     text-align: left;
+   }
+ }
+
+/* Below code fromw3schools.com */
+
+ 
+ /* Hide the link that should open and close the topnav on small screens */
+ .topnav .icon {
+   display: none;
+ }
+
+ /* End code fromw3schools.com */
+
+
+/* --------
+  FOOTER
+--------- */
+
+footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: #D8E095;
+   text-align: center;
+   padding: 25px;
+   color: #2F522B;
+}
+
+#icons {
+   font-size: 2rem;
+   padding-bottom: 0.5em;
+}
+
+footer p {
+   font-size: 16px;
+}
+
+footer a {
+   color:#2F522B
+}
+
+footer a:link {
+   color:#2F522B;
+}
+
+footer a:hover {
+   color:#579B3E;
+}
+
+
+
+
+/* --------
+  HOME PAGE
+--------- */
+
+
+section #home-images {
+   width: 100%;
+   display: inline-flex;
+}
+
+.container-2 {
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 50px;
+}
+
+main .flexbox {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 10%;
+}
+
+/*.container-2 img {
+   max-width: 100%;
+   height: auto;
+}*/
+
+/* home page image animation */
+
+@keyframes homepageAnimation {
+   from {width: 600px;}
+   to {width: 630px;}
+}
+
+.container-2 img:hover {
+   width: 600px;
+   animation-name: homepageAnimation;
+   position: relative;
+   animation-duration: 0.8s;
+   animation-timing-function: ease;
+   animation-iteration-count: 2;
+   animation-direction: alternate;
+}
+
+
+/*@media screen and (min-width: 1251px) {
+   #home-left-img {
+      display: none
+   }
+   #home-left-text {
+      display: none
+   }
+}*/
+
+@media screen and (max-width: 1350px) {
+   main .flexbox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+   .container-2 img {
+      max-width: 100%;
+      height: auto;
+   }
+   #casey-davis-home {
+      font-size: 13vw;
+   }
+   .container-2 a {
+      font-size: 2vw;
+   }
+}
+
+
+
+/* --------
+  ABOUT PAGE
+--------- */
+
+.container-3 h2 {
+   font-size: 7rem;
+}
+
+#about-right {
+   text-align: left;
+}
+
+.container-3 {
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   padding-top: 80px;
+}
+
+.container-3 img {
+   padding-top: 20px;
+}
+
+.me {
+   margin-right: 50px;
+   margin-left: 50px;
+}
+
+
+button {
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   color: #000000;
+   background-color: #f2f1d0;
+   font-size: 25px;
+   border: 0px solid #f2f1d0;
+   padding: 15px 50px;
+   cursor: pointer
+}
+button:hover {
+   color: #579b3e;
+   background-color: #f2f1d0;
+}
+
+
+
+@media screen and (min-width: 1371px) {
+   #about-left h2 {
+      display: none;
+   }
+   #about-left p {
+      display: none;
+   }
+   #about-left button {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 1370px) {
+   #about-right {
+      display: none;
+   }
+   #footer-me {
+      position: relative;
+   }
+   #about-left {
+      padding-bottom: 30px;
+   }
+   #about-left p {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+   }
+   .me h2 {
+      font-size: 13vw;
+   }
+   #about-left img {
+      max-width: 100%;
+      height: auto;
+   }
+}
+
+
+
+
+/* --------
+  ILLUSTRATION PAGE
+--------- */
+
+#illustration p {
+   text-align: center;
+}
+
+#illustration img {
+   padding: 4px;
+}
+
+@media screen and (max-width: 1250px) {
+   #illustration h1 {
+      font-size: 15vw;
+   }
+}
+
+
+
+
+/* --------
+  PROJECTS PAGE
+--------- */
+
+#projects a {
+   padding-bottom: 30px;
+}
+
+.projects-text-top {
+   padding-top: 50px;
+   padding-bottom: 20px;
+   margin-left: 120px;
+   margin-right: 120px;
+}
+
+.projects-text {
+   padding-bottom: 50px;
+   margin-left: 120px;
+   margin-right: 120px;
+}
+
+#projects img {
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+}
+
+#projects-1 {
+   filter: drop-shadow(0 0 10px rgb(143, 143, 143));
+}
+
+#projects {
+   padding-bottom: 30px;
+}
+
+.container-4 {
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 50px;
+}
+
+#project-2 img {
+      max-width: 100%;
+      height: auto;
+   }
+
+
+
+
+@media screen and (max-width: 1250px) {
+   #projects h1 {
+         font-size: 15vw;
+   }
+}
+
+
+
+
+/* CONTROL FOR INDIVIDUAL PROJECT PAGES */
+
+@media screen and (max-width: 1250px) {
+   .projects-text-top {
+      margin-left: 50px;
+      margin-right: 50px;
+   }
+   .projects-text {
+      margin-left: 50px;
+      margin-right: 50px;
+   }
+}
+
+
+
+/* --------
+  CONTACT PAGE
+--------- */
+
+
+#contact p {
+   text-align: center;
+   padding-left: 50px;
+   padding-right: 50px;
+}
+
+#contact img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+#contact a {
+   color:#2F522B;
+   padding: 0;
+   text-decoration: underline;
+}
+
+#contact a:hover {
+   color: #579B3E;
+}
+
+@media screen and (max-width: 1250px) {
+   #contact h1 {
+      font-size: 15vw;
+   }
+   #contact img {
+      max-width: 100%;
+      height: auto;
+   }
+   /*#contact-footer {
+      position: fixed;
+   }*/
+}
